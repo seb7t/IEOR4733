@@ -41,7 +41,7 @@ def is_close_to_trading_hours():
     start_time = datetime.time(9, 00)
     end_time = datetime.time(9, 30)
     # Check if the current time is within trading hours
-    return start_time <= now.time() <= end_time
+    return start_time <= now.time() < end_time
 
 def is_within_trading_hours():
     # Get the current time
@@ -66,6 +66,7 @@ def trade(symbols, api):
 
                     # get today's position from yesterday's data
                     positions = strategy.get_positions(symbols).iloc[-1, :]
+                    time.sleep(1800)
                 elif is_within_trading_hours():
                     curr_portfolio = get_current_portfolio(api)
                     for symbol in symbols:
