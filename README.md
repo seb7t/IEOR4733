@@ -4,8 +4,9 @@ Algorithmic Trading Project Alpaca
 ## Introduction
   This project aims to build a trading system on Alpaca. There are two modes of execution: 'trade' and 'backtest'
 
-## Market Data Retrieval:
+## Market Data Retrieval and Storage:
   See [data_prep.py](data_prep.py)
+  The function takes in Alpaca API, the tickers we would like to trade as an iterable-object, timeframe, start date, end date, and the path where the data is saved. Default path is ./Data/. Through 
   
 
 ## Data Storage Strategy:
